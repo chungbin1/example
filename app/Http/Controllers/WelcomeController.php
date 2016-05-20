@@ -556,4 +556,30 @@ class WelcomeController extends Controller {
 
 
 
+		public function bachlong_Deltail(){
+			$html=HtmlDomParser::file_get_html($link);
+			  	$title = $html->find('.info_product .detail_info h2', 0)->plaintext;
+			  	$price=$html->find('.content_attribute .price b', 0)->plaintext;
+			  	$params=array();
+				  foreach($html->find('.hide  .description') as $param)  {
+				    $params[] = $param->outertext;
+				  }
+				  $description=implode(" ",$params);
+				  	$home='http://sieuthismartphone.vn';
+				$images = array();
+		  		foreach($html->find('.detail_images .image_main img') as $img)  {
+			    $urlArray = explode('/',$img->src);
+			    $tmpPath = 'resources/upload/'.end($urlArray);
+			    $tmpImg = file_get_contents($home.$img->src);
+			    file_put_contents($tmpPath, $tmpImg);
+			     if (file_exists($tmpPath)) {
+			    	$images = $tmpPath;
+			  } else {
+			    echo "This file does not exist";
+			  }
+			}
+		} 
+
+
+
 }

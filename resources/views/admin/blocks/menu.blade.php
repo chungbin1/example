@@ -9,10 +9,10 @@
                             <a href="#"><i class="fa fa-users fa-fw"></i> Banner<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{!! route('admin.banner.getList') !!}">List Banner</a>
+                                    <a href="{!! route('admin.banner.getList') !!}"><img src="{!! url('public/trangchu/images/addressbook.ico') !!}" class="icon" alt="">&nbsp;List Banner</a>
                                 </li>
                                 <li>
-                                    <a href="{!! route('admin.banner.getAdd') !!}">Add Banner</a>
+                                    <a href="{!! route('admin.banner.getAdd') !!}"><img src="{!! url('public/trangchu/images/add1.ico') !!}" class="icon" alt="">&nbsp;Add Banner</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -21,10 +21,10 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Category<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{!! route('admin.cate.getList') !!}">List Category</a>
+                                    <a href="{!! route('admin.cate.getList') !!}"><img src="{!! url('public/trangchu/images/addressbook.ico') !!}" class="icon" alt="">&nbsp;List Category</a>
                                 </li>
                                 <li>
-                                    <a href="{!!route('admin.cate.getAdd')!!}">Add Category</a>
+                                    <a href="{!!route('admin.cate.getAdd')!!}"><img src="{!! url('public/trangchu/images/add1.ico') !!}" class="icon" alt="">&nbsp;Add Category</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -33,10 +33,10 @@
                             <a href="#"><i class="fa fa-cube fa-fw"></i> Product<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{!! route('admin.product.getlist') !!}">List Product</a>
+                                    <a href="{!! route('admin.product.getlist') !!}"><img src="{!! url('public/trangchu/images/addressbook.ico') !!}" class="icon" alt="">&nbsp;List Product</a>
                                 </li>
                                 <li>
-                                    <a href="{!! route('admin.product.getAdd') !!}">Add Product</a>
+                                    <a href="{!! route('admin.product.getAdd') !!}"><img src="{!! url('public/trangchu/images/add1.ico') !!}" class="icon" alt="">&nbsp;Add Product</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -45,10 +45,10 @@
                             <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{!! route('admin.user.getList') !!}">List User</a>
+                                    <a href="{!! route('admin.user.getList') !!}"><img src="{!! url('public/trangchu/images/addressbook.ico') !!}" class="icon" alt="">&nbsp;List User</a>
                                 </li>
                                 <li>
-                                    <a href="{!! route('admin.user.getAdd') !!}">Add User</a>
+                                    <a href="{!! route('admin.user.getAdd') !!}"><img src="{!! url('public/trangchu/images/add1.ico') !!}" class="icon" alt="">&nbsp;Add User</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -58,7 +58,7 @@
                             <a href="#"><i class="fa fa-users fa-fw"></i> Contact<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{!! route('admin.contact.getList') !!}">List Contact</a>
+                                    <a href="{!! route('admin.contact.getList') !!}"><img src="{!! url('public/trangchu/images/addressbook.ico') !!}" class="icon" alt="">&nbsp;List Contact</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

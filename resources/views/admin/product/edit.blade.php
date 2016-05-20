@@ -39,7 +39,6 @@
                                 <textarea class="form-control" rows="3" name="description">
                                     {!! old('description',$product['description']) !!}
                                 </textarea>
-                                <script type="text/javascript">ckeditor('description')</script>
                                
                             </div>
                             <div class="form-group">

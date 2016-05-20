@@ -54,4 +54,5 @@ class TrangchuController extends Controller {
 	public function noiban(){
 		
 	}
+	
 }

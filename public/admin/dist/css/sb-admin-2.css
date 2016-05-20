@@ -43,7 +43,10 @@ body {
     padding: 15px;
     min-height: 50px;
 }
-
+.icon{
+    height: 20px; 
+    width: 20px;
+}
 .navbar-top-links .dropdown-menu li {
     display: block;
 }
@@ -187,7 +190,9 @@ body {
     padding-bottom: 5px;
     border-bottom: 1px dotted #999;
 }
-
+.center{
+    text-align: center;
+}
 .chat li.left .chat-body {
     margin-left: 60px;
 }

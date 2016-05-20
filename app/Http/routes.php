@@ -8,7 +8,8 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
-Route::group(['prefix'=>'admin'],function(){
+
+Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 	Route::group(['prefix'=>'cate'],function(){
 		Route::get('list',['as'=>'admin.cate.getList','uses'=>'CateController@getList']);
 		Route::get('add',['as'=>'admin.cate.getAdd','uses'=>'CateController@getAdd']);

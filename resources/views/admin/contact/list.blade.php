@@ -32,8 +32,8 @@
                                 {!! $item['address'] !!}
                                 </td>
                                 
-                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="./delete/<?php echo $item['id'] ?>" onclick=" return confirm('Bạn chắc chắn xóa không??')" > Delete</a></td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="./reply/<?php echo $item['id'] ?>">Reply</a></td>
+                                <td class="center"><a href="./delete/<?php echo $item['id'] ?>" onclick=" return confirm('Bạn chắc chắn xóa không??')" > <img style="height: 50px; height: 20px;" src="{!! url('public/trangchu/images/delete.ico') !!}" alt=""></a></td>
+                                <td class="center"><a href="./reply/<?php echo $item['id'] ?>"><img src="{!! url('public/trangchu/images/contact.ico') !!}" style="height: 50px; height: 20px;" alt=""></a></td>
                             </tr>
                             @endforeach
                         

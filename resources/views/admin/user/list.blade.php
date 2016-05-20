@@ -29,8 +29,8 @@
                                     @endif
 
                                 </td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="./delete/{!! $item['id'] !!}" onclick="return confirm('Bạn có chắc chắn xóa không???')"> Delete</a></td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="./edit/{!! $item['id'] !!}">Edit</a></td>
+                                <td class="center"><a href="./delete/{!! $item['id'] !!}" onclick="return confirm('Bạn có chắc chắn xóa không???')"> <img style="height: 50px; height: 20px;" src="{!! url('public/trangchu/images/delete.ico') !!}" alt=""></a></td>
+                                <td class="center"> <a href="./edit/{!! $item['id'] !!}"><img src="{!! url('public/trangchu/images/edit.ico') !!}" style="height: 50px; height: 20px;"  alt=""></a></td>
                             </tr>
                            @endforeach
                         </tbody>

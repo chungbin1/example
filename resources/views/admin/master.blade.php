@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<font color="#cccccc"><marquee behavior="alternate" direction="up" width="100%"><marquee direction="right" behavior="alternate" style="" onmouseover="this.stop()" onmouseout="this.start()"><h3>Chào bạn! Đây là trang quản trị của tôi</h3></marquee></marquee></font>
+
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -34,12 +34,11 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> {!! Auth::user()->username !!}</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
+                        
                         <li class="divider"></li>
-                        <li><a href="{!! url('logout') !!}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="{!! url('auth/logout') !!}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->

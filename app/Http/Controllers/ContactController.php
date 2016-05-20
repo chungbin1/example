@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
 use App\Contact;
+use Mail;
 class ContactController extends Controller {
 
 	/**
@@ -16,7 +17,7 @@ class ContactController extends Controller {
 	{
 		return view('trangchu.pages.contact');
 	}
-	public function postAdd(Request $request){
+	public function postAdd(ContactRequest $request){
 		$post=$request->all();
 		$data=array(
 			'name'=>$post['name'],
@@ -50,15 +51,13 @@ class ContactController extends Controller {
 		return view('admin.contact.reply',compact('contact'));
 	}
 	public function postReply(Request $request){
-		$contact=new Contact();
-		$data['name']=$contact->name=$request->name;
-		$data['email']=$contact->email=$request->email;
-		$data['reply']=$contact->reply=$request->reply;
-		if($contact->save()){
-			Mail::send('contact.mail',['data'=>$data],function($mail) use ($data){
-				$mail->to($data['email'],$data['name']->from('tuytam.199x@gmail.com')->subject('Welcome'));
+		$data=$request->all();
+			 Mail::send('admin.contact.mail', $data, function($message) use ($data)
+            {
+                $message->from($data['email'] , $data['name']);
+                $message->to('tuytam.199x@gmail.com', 'Chung Bin')->subject('contact request');
 
-			});
-		}
+            });
+            
 	}
 }

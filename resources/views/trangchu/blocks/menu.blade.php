@@ -21,7 +21,7 @@
                                  ?>
                                  @foreach($menu_level2 as $item)
                                 <li>
-                               <h3> {!! strip_tags($item->name) !!}</h3>
+                               <h4> {!! strip_tags($item->name) !!}</h4>
                                 
                                 
                                 <ul>

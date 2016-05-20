@@ -3,17 +3,7 @@
 
 @section('action','List')
 @section('content')
-                        <div class="btn-group" style="margin-left: 180px;">
-                            <button type="button" class="btn btn-info">Export</button>
-                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-                                <span class="caret"></span>
-                                <span class="sr-only">Toggle Dropdown</span>
-
-                            </button>
-                            <ul class="dropdown-menu" role="menu" id="export-menu">
-                                <li id="export-to-excel"><a href="{!! route('export') !!}">Export to Excel</a></li>
-                            </ul>
-                        </div>
+                        
         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
 
@@ -40,12 +30,22 @@
                                     ?>
                                 </td>
                                 
-                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="./delete/<?php echo $item['id'] ?>" onclick=" return confirm('Bạn chắc chắn xóa không??')" > Delete</a></td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="./edit/<?php echo $item['id'] ?>">Edit</a></td>
+                                <td class="center" style="text-align: center"><a href="./delete/<?php echo $item['id'] ?>" onclick=" return confirm('Bạn chắc chắn xóa không??')" ><img style="height: 50px; height: 20px;" src="{!! url('public/trangchu/images/delete.ico') !!}" alt=""></a></td></td>
+                                <td style="text-align: center;"><a href="./edit/<?php echo $item['id'] ?>"><img src="{!! url('public/trangchu/images/edit.ico') !!}" style="height: 50px; height: 20px;"  alt=""></a></td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table> 
-                                          <a href="{!! route('deleteAll') !!}" class="btn btn-danger">Delete All</a>   
+                                          <a href="{!! route('deleteAll') !!}" class="btn btn-danger">Delete All</a>  <div class="btn-group" style="">
+                            <button type="button" class="btn btn-info">Export</button>
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+
+                            </button>
+                            <ul class="dropdown-menu" role="menu" id="export-menu">
+                                <li id="export-to-excel"><a href="{!! route('export') !!}">Export to Excel</a></li>
+                            </ul>
+                        </div> 
 
                     @stop  
